@@ -3,20 +3,20 @@
 pipeline {
     agent any
         stages{
-            stage("initialization"){
-                steps{
-                    script{
-                        def gv = load "script.groovy"
-                    }
-                }
-            }
-            stage("test"){
-                steps{
-                    script{
-                        test()
-                    }
-                }
-            }
+            // stage("initialization"){
+            //     steps{
+            //         script{
+            //             def gv = load "script.groovy"
+            //         }
+            //     }
+            // }
+            // stage("test"){
+            //     steps{
+            //         script{
+            //             test()
+            //         }
+            //     }
+            // }
             stage("version bump"){
                 steps{
                     script{
@@ -24,13 +24,13 @@ pipeline {
                     }
                 }
             }
-            stage("artifact"){
-                steps{
-                    script{
-                        buildArtifact "drinks_app"
-                    }
-                }
-            }
+            // stage("artifact"){
+            //     steps{
+            //         script{
+            //             buildArtifact "drinks_app"
+            //         }
+            //     }
+            // }
             stage("build"){
                 steps{
                     script{
@@ -38,15 +38,15 @@ pipeline {
                 }
                     }
                 }
-            stage("deploy"){
-                steps{
-                    script{
-                        sshagent(['SSH_Key']) {
-                            sh "bash ./deploy.sh cazmaars/jenkins:drinks-${version} ec2-user@35.177.182.143"                  
-                            }
-                    }
-                }
-            }
+            // stage("deploy"){
+            //     steps{
+            //         script{
+            //             sshagent(['SSH_Key']) {
+            //                 sh "bash ./deploy.sh cazmaars/jenkins:drinks-${version} ec2-user@35.177.182.143"                  
+            //                 }
+            //         }
+            //     }
+            // }
             stage("commit to git"){
                 steps{
                     script{
