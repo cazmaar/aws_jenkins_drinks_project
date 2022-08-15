@@ -24,13 +24,13 @@ pipeline {
                     }
                 }
             }
-            // stage("artifact"){
-            //     steps{
-            //         script{
-            //             buildArtifact "drinks_app"
-            //         }
-            //     }
-            // }
+            stage("artifact"){
+                steps{
+                    script{
+                        buildArtifact "drinks_app"
+                    }
+                }
+            }
             // stage("build"){
             //     steps{
             //         script{
