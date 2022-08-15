@@ -3,20 +3,20 @@
 pipeline {
     agent any
         stages{
-            // stage("initialization"){
-            //     steps{
-            //         script{
-            //             def gv = load "script.groovy"
-            //         }
-            //     }
-            // }
-            // stage("test"){
-            //     steps{
-            //         script{
-            //             test()
-            //         }
-            //     }
-            // }
+            stage("initialization"){
+                steps{
+                    script{
+                        def gv = load "script.groovy"
+                    }
+                }
+            }
+            stage("test"){
+                steps{
+                    script{
+                        test()
+                    }
+                }
+            }
             stage("version bump"){
                 steps{
                     script{
@@ -31,22 +31,22 @@ pipeline {
                     }
                 }
             }
-            // stage("build"){
-            //     steps{
-            //         script{
-            //             builddocker "cazmaars/jenkins:drinks-${version}"
-            //     }
-            //         }
-            //     }
-            // stage("deploy"){
-            //     steps{
-            //         script{
-            //             sshagent(['SSH_Key']) {
-            //                 sh "bash ./deploy.sh cazmaars/jenkins:drinks-${version} ec2-user@35.177.182.143"                  
-            //                 }
-            //         }
-            //     }
-            // }
+            stage("build"){
+                steps{
+                    script{
+                        builddocker "cazmaars/jenkins:drinks-${version}"
+                }
+                    }
+                }
+            stage("deploy"){
+                steps{
+                    script{
+                        sshagent(['SSH_Key']) {
+                            sh "bash ./deploy.sh cazmaars/jenkins:drinks-${version} ec2-user@3.8.5.181"                  
+                            }
+                    }
+                }
+            }
             stage("commit to git"){
                 steps{
                     script{
