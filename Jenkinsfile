@@ -20,7 +20,7 @@ pipeline {
             stage("version bump"){
                 steps{
                     script{
-                        bumpversion "minor"
+                        bumpversion "major"
                     }
                 }
             }
@@ -31,13 +31,13 @@ pipeline {
             //         }
             //     }
             // }
-            stage("build"){
-                steps{
-                    script{
-                        builddocker "cazmaars/jenkins:drinks-${version}"
-                }
-                    }
-                }
+            // stage("build"){
+            //     steps{
+            //         script{
+            //             builddocker "cazmaars/jenkins:drinks-${version}"
+            //     }
+            //         }
+            //     }
             // stage("deploy"){
             //     steps{
             //         script{
