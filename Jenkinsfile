@@ -41,7 +41,7 @@ pipeline {
             stage("deploy"){
                 steps{
                     script{
-                        sshagent(['ec2-server']) {
+                        sshagent(['SSH_Key']) {
                             sh "bash ./deploy.sh cazmaars/jenkins:drinks-${version} ec2-user@35.177.182.143"                  
                             }
                     }
