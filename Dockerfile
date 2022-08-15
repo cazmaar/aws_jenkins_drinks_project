@@ -6,6 +6,6 @@ COPY . /home/app
 
 WORKDIR /home/app
 
-RUN npm i
+RUN npm ci --production
 
 CMD ["npm", "start"]
