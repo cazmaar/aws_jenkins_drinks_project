@@ -1,0 +1,61 @@
+  .list-section {
+    margin-left: 0rem;
+  }
+
+.image-p {
+  width: 8rem;
+  margin-top: 1.5rem;
+}
+
+.drink_name {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.welcome {
+  color: white;
+}
+
+.image-p {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+}
+
+.image-p:hover {
+  animation: card-animation 0.4s forwards;
+}
+
+@keyframes card-animation {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .list-section {
+    margin-left: 0.3rem;
+  }
+  .image-p {
+    width: 12rem;
+    margin-right: 1.5rem;
+  }
+
+  .drink_name {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .image-p {
+    width: 16rem;
+    margin-right: 0;
+  }
+
+  .drink_name {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,130 @@
+.calcbackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 2000px;
+}
+
+.minibg {
+  width: 85%;
+  max-height: 50vh;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  background: #ea8c55;
+  overflow-y: scroll;
+  margin: 2px;
+  border-radius: 2rem;
+}
+
+.minibg::-webkit-scrollbar {
+  width: 0px;
+}
+
+.text-img {
+  display: flex;
+}
+
+.modalName,
+.modal-ingredients {
+  font-size: x-large;
+  font-weight: 500;
+  color: white;
+  margin-left: 1rem;
+}
+
+.ingredientSect {
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.ingredients {
+  color: white;
+}
+
+.modal-image {
+  margin-left: 3%;
+  width: 8rem;
+  height: 8rem;
+}
+
+.instructions-heading {
+  color: white;
+}
+
+.instructions-text {
+  color: white;
+}
+
+.modal-button {
+  margin-top: 1.5rem;
+  float: right;
+  margin-right: 1rem;
+  background-color: grey;
+}
+
+@media only screen and (min-width: 641px) {
+  .modal-image {
+    margin-left: 3%;
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .ingredientSect {
+    margin-left: 8rem;
+  }
+
+  .instructions-heading {
+    font-size: x-large;
+  }
+
+  .instructions-text {
+    font-size: x-large;
+    padding: 0.5rem;
+  }
+
+  .ingredients {
+    font-size: large;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .minibg {
+    width: 70%;
+  }
+
+  .modal-image {
+    margin-left: 50%;
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .modalName {
+  padding-left: 15rem;
+  }
+
+  .ingredientSect {
+    margin-left: 35rem;
+    margin-top: 3rem;
+  }
+
+  .instructions-heading {
+    font-size: xx-large;
+  }
+
+  .instructions-text {
+    font-size: x-large;
+    padding: 0.5rem;
+  }
+
+  .ingredients {
+    font-size: large;
+  }
+  .instructions-heading {
+    font-size: X-large;
+  }
+}

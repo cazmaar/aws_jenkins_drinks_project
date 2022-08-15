@@ -1,0 +1,26 @@
+.drinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 90%;
+  list-style-type: none;
+}
+
+@media only screen and (min-width: 641px) {
+  .drinks {
+    margin-top: 0.3rem;
+    margin-right: 8rem;
+    margin-left: 1.7rem;
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .drinks {
+    margin-top: 0.3rem;
+    margin-right: 8rem;
+    margin-left: 5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
