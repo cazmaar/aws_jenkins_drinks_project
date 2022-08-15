@@ -1,6 +1,6 @@
 {
   "name": "cocktail-app",
-  "version": "32.51.0",
+  "version": "1.0.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

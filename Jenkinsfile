@@ -42,14 +42,15 @@ pipeline {
                 steps{
                     script{
                         sshagent(['ec2-server']) {
-                            sh "bash ./deploy.sh cazmaars/jenkins:drinks-${version} ec2-user@35.177.182.143"                  }
+                            sh "bash ./deploy.sh cazmaars/jenkins:drinks-${version} ec2-user@35.177.182.143"                  
+                            }
                     }
                 }
             }
             stage("commit to git"){
                 steps{
                     script{
-                   commitgit()
+                    commitgit()
                     }
                 }
             }}
