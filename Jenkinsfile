@@ -10,27 +10,27 @@ pipeline {
                     }
                 }
             }
-            // stage("test"){
-            //     steps{
-            //         script{
-            //             test()
-            //         }
-            //     }
-            // }
-            // stage("version bump"){
-            //     steps{
-            //         script{
-            //             bumpversion "minor"
-            //         }
-            //     }
-            // }
-            // stage("artifact"){
-            //     steps{
-            //         script{
-            //             buildArtifact "drinks_app"
-            //         }
-            //     }
-            // }
+            stage("test"){
+                steps{
+                    script{
+                        test()
+                    }
+                }
+            }
+            stage("version bump"){
+                steps{
+                    script{
+                        bumpversion "minor"
+                    }
+                }
+            }
+            stage("artifact"){
+                steps{
+                    script{
+                        buildArtifact "drinks_app"
+                    }
+                }
+            }
             stage("build"){
                 steps{
                     script{
